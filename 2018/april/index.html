@@ -124,6 +124,23 @@
 
             font-size: 150%;
         }
+
+        @media print {
+            .no-print {
+                display:none;
+            }
+            .print {
+                display:block;
+            }
+        }
+        @media not print {
+            .no-print {
+                display:block;
+            }
+            .print {
+                display:none;
+            }
+        }
     </style>
 </head>
 
@@ -137,7 +154,8 @@
     </div>
 
     <div class="sidebar">
-        <a href="https://newsletter.t485.org/2018/march/">Not displaying correctly? Click here to view in browser.</a>
+        <a href="https://newsletter.t485.org/2018/march/" class=".no-print">Not displaying correctly? Click here to view in browser.</a>
+        <a href="https://newsletter.t485.org/2018/march/T485-Newsletter-March-2018.pdf" class=".no-print">A pdf is also available here.</a>
         <h2>Troop Announcements</h2>
         <ul>
             <li>Please upload pictures for Point Reyes
@@ -157,13 +175,12 @@
 
         <h2>Future Events</h2>
         <ul>
-            <li>March 3 - Philmont Practice</li>
-            <li>March 18 - Philmont Practice</li>
-            <li>March 24 - Mt. Hermon Adventure</li>
-            <li>March 24 - HOC5 Easter Egg Hunt</li>
-            <li>April 1 - Philmont Practice</li>
-            <li>April 7-8 - Mother and Son</li>
+            
+            <li> April 7-8 - Mother and Son</li>
+            <li> April 14-15 - Philmont Spring Shakedown</li>
             <li> April 19-22 - April Backpacking</li>
+            <li> April 29 - Court of Honor</li>
+            <li> May 5 - 20 Mile Hike with Troop 64</li>
 
 
         </ul>
@@ -278,17 +295,17 @@
 
         <h2>Gallery</h2>
         <div>
-            <img src="https://newsletter.t485.org/2018/march/assets/March1.jpg" alt="">
+            <img src="https://newsletter.t485.org/2018/april/assets/April1.jpg" alt="">
             <br>
             <!--<span class="image-caption">No Caption Provided</span>-->
             <br>
 
-            <img src="https://newsletter.t485.org/2018/march/assets/March2.jpg" alt="">
+            <img src="https://newsletter.t485.org/2018/april/assets/April2.jpg" alt="">
             <br>
             <!--<span class="image-caption">No Caption Provided</span>-->
             <br>
 
-            <img src="https://newsletter.t485.org/2018/march/assets/March3.jpg" alt="">
+            <img src="https://newsletter.t485.org/2018/april/assets/April3.jpg" alt="">
             <br>
             <!--<span class="image-caption">No Caption Provided</span>-->
 
