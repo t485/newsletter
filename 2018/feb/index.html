@@ -118,6 +118,24 @@
 
             font-size: 150%;
         }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .print {
+                display: block;
+            }
+        }
+
+        @media not print {
+            .no-print {
+                display: block;
+            }
+            .print {
+                display: none;
+            }
+        }
     </style>
 </head>
 
