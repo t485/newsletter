@@ -126,21 +126,20 @@
         }
     </style>
     <style>
+        .no-print {
+            display: block;
+        }
+
+        .print {
+            display: none;
+        }
+
         @media print {
             .no-print {
                 display: none;
             }
             .print {
                 display: block;
-            }
-        }
-
-        @media not print {
-            .no-print {
-                display: block;
-            }
-            .print {
-                display: none;
             }
         }
     </style>
