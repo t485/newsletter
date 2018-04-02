@@ -1,256 +1,201 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <title>Newsletter</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Mukta|Roboto+Slab" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Newsletter</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Mukta|Roboto+Slab" rel="stylesheet">
+	<style>
+	       body {
+	           margin: 0px;
+	           padding: 0px;
+	           font-family: 'Lato', 'Mukta', Arial, sans-serif;
+
+	       }
+
+	       ul {
+	           padding-left: 30px;
+	       }
+
+	       p {
+	           margin-bottom: 10px;
+	           font-family: 'Lato', sans-serif;
+
+	       }
+
+	       .sidebar {
+	           width: 300px;
+	           margin: 30px 0px 0px 20px;
+	           padding: 0px 20px 20px 20px;
+	           float: right;
+	           background-color: #232976;
+	           color: #E8E8E8;
+	       }
+
+	       .sidebar a,
+	       .sidebar a:visited {
+	           color: #E8E8E8;
+	       }
+
+	       .sidebar a:hover,
+	       .sidebar a:focus {
+	           color: #d9d9d9;
+	       }
+
+	       .content-wrapper {
+	           background-color: white;
+	           padding: 0px 40px 40px 40px;
+	           max-width: 1000px;
+	           margin: auto;
+	       }
+
+	       .header {
+	           background-color: #3fe5c3;
+	           padding: 30px;
+	           color: black;
+	           vertical-align: middle;
+	           font-family: 'Mukta', sans-serif;
+
+
+	       }
 
 
 
-    <style>
-        body {
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Lato', 'Mukta', Arial, sans-serif;
+	       .footer {
+	           background-color: #6f6f6f;
+	           padding: 80px 40px 80px 40px;
+	           color: white;
+	           text-align: center;
+	       }
 
-        }
+	       .author {
+	           font-size: 0.9em;
+	       }
 
-        ul {
-            padding-left: 30px;
-        }
+	       .footnote {
+	           font-size: 0.9em;
+	       }
 
-        p {
-            margin-bottom: 10px;
-            font-family: 'Lato', sans-serif;
+	       .underline {
+	           text-decoration: underline;
+	       }
 
-        }
+	       h2 {
+	           margin-top: 30px;
+	           margin-bottom: 10px;
+	           font-family: 'Mukta', sans-serif;
+	       }
 
-        .sidebar {
-            width: 300px;
-            margin: 30px 0px 0px 20px;
-            padding: 0px 20px 20px 20px;
-            float: right;
-            background-color: #232976;
-            color: #E8E8E8;
-        }
+	       img {
+	           margin-top: 30px;
+	           max-width: 700px;
+	       }
 
-        .sidebar a,
-        .sidebar a:visited {
-            color: #E8E8E8;
-        }
+	       #title {
+	           margin-left: 15px;
+	       }
 
-        .sidebar a:hover,
-        .sidebar a:focus {
-            color: #d9d9d9;
-        }
+	       #logo {
+	           width: 88px;
+	           height: 88px;
+	           vertical-align: middle;
+	       }
 
-        .content-wrapper {
-            background-color: white;
-            padding: 0px 40px 40px 40px;
-            max-width: 1000px;
-            margin: auto;
-        }
+	       #title-block {
+	           vertical-align: middle;
+	           display: inline;
+	       }
 
-        .header {
-            background-color: #3fe5c3;
-            padding: 30px;
-            color: black;
-            vertical-align: middle;
-            font-family: 'Mukta', sans-serif;
+	       #title,
+	       #subtitle {
+	           display: inline;
 
+	       }
 
-        }
+	       #title {
+	           font-family: 'Roboto Slab', serif;
 
+	       }
 
+	       #subtitle {
 
-        .footer {
-            background-color: #6f6f6f;
-            padding: 80px 40px 80px 40px;
-            color: white;
-            text-align: center;
-        }
+	           font-size: 150%;
+	       }
+	</style>
+	<style>
+	       .no-print {
+	           display: block;
+	       }
 
-        .author {
-            font-size: 0.9em;
-        }
+	       .print {
+	           display: none;
+	       }
 
-        .footnote {
-            font-size: 0.9em;
-        }
-
-        .underline {
-            text-decoration: underline;
-        }
-
-        h2 {
-            margin-top: 30px;
-            margin-bottom: 10px;
-            font-family: 'Mukta', sans-serif;
-        }
-
-        img {
-            margin-top: 30px;
-            max-width: 700px;
-        }
-
-        #title {
-            margin-left: 15px;
-        }
-
-        #logo {
-            width: 88px;
-            height: 88px;
-            vertical-align: middle;
-        }
-
-        #title-block {
-            vertical-align: middle;
-            display: inline;
-        }
-
-        #title,
-        #subtitle {
-            display: inline;
-
-        }
-
-        #title {
-            font-family: 'Roboto Slab', serif;
-
-        }
-
-        #subtitle {
-
-            font-size: 150%;
-        }
-    </style>
-    <style>
-        .no-print {
-            display: block;
-        }
-
-        .print {
-            display: none;
-        }
-
-        @media print {
-            .no-print {
-                display: none;
-            }
-            .print {
-                display: block;
-            }
-        }
-    </style>
+	       @media print {
+	           .no-print {
+	               display: none;
+	           }
+	           .print {
+	               display: block;
+	           }
+	       }
+	</style>
 </head>
-
 <body>
-    <div class="header">
-        <img id="logo" src="../../logo.png" alt="Logo" style="margin-top: 0px;">
-        <div id="title-block">
-            <h1 id="title">T485 Newsletter</h1>
-            <i id="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;April 2018</i>
-        </div>
-    </div>
-
-    <div class="sidebar">
-        <a href="https://newsletter.t485.org/2018/april/" class="no-print">Not displaying correctly? Click here to view in browser.</a>
-        <br>
-        <a href="https://newsletter.t485.org/2018/april/T485-Newsletter-April-2018.pdf" class="no-print">A pdf is also available here.</a>
-        <h2>Troop Announcements</h2>
-        <ul>
-
-            <li> If you are interested in featuring an article in this newsletter, join the
-                <a href="https://t485.slack.com/messages/newsletter/">#newsletter</a> channel on
-                <a href="https://t485.slack.com/messages/newsletter/">slack</a>.</li>
-
-
-        </ul>
-
-
-        <h2>Future Events</h2>
-        <ul>
-
-            <li> April 7-8 - Mother and Son</li>
-            <li> April 14-15 - Philmont Spring Shakedown</li>
-            <li> April 19-22 - April Backpacking</li>
-            <li> April 29 - Court of Honor</li>
-            <li> May 5 - 20 Mile Hike with Troop 64</li>
-
-
-        </ul>
-        <!--
+	<div class="header">
+		<img alt="Logo" id="logo" src="../../logo.png" style="margin-top: 0px;">
+		<div id="title-block">
+			<h1 id="title">T485 Newsletter</h1><i id="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;April 2018</i>
+		</div>
+	</div>
+	<div class="sidebar">
+		<a class="no-print" href="https://newsletter.t485.org/2018/april/">Not displaying correctly? Click here to view in browser.</a><br>
+		<a class="no-print" href="https://newsletter.t485.org/2018/april/T485-Newsletter-April-2018.pdf">A pdf is also available here.</a>
+		<h2>Troop Announcements</h2>
+		<ul>
+			<li>If you are interested in featuring an article in this newsletter, join the <a href="https://t485.slack.com/messages/newsletter/">#newsletter</a> channel on <a href="https://t485.slack.com/messages/newsletter/">slack</a>.
+			</li>
+		</ul>
+		<h2>Future Events</h2>
+		<ul>
+			<li>April 7-8 - Mother and Son</li>
+			<li>April 14-15 - Philmont Spring Shakedown</li>
+			<li>April 19-22 - April Backpacking</li>
+			<li>April 29 - Court of Honor</li>
+			<li>May 5 - 20 Mile Hike with Troop 64</li>
+		</ul><!--
         <h2>Fun facts</h2>
         <ul>
             <li>Fun Fact.</li>
             
         </ul>
         -->
-    </div>
-    <!-- /.sidebar -->
-
-    <div class="content-wrapper">
-
-        <h2>Another April Backpacking Update</h2>
-        <!--<span class="author">
+	</div><!-- /.sidebar -->
+	<div class="content-wrapper">
+		<h2>Another April Backpacking Update</h2>
+        <span class="author">
             <i>Jacob Nie</i>
-        </span>-->
-        <p>
-            The Sierra received a lot of snow in March! The amount of snow that fell in March was more than double the amount of snow
-            that fell in the entire winter---good for the ski tourism economy but unfortunately bad for spring backpacking.
-            Taking into account some of the additional safety hazards associated with this surprise snowfall, we’ll be changing
-            the location.
-
-
-
-        </p>
-        <p>
-            The new route is a 45 mile loop around Hetch Hetchy Reservoir in Northern Yosemite Nat’l Park. Hetch Hetchy used to be an
-            amazing valley as impressive as Yosemite Valley, but it was dammed in 1923 (to the dismay of environmentalists
-            like John Muir) and supplies water to the San Francisco area via the Hetch Hetchy Aqueduct. Although it’s more
-            lake than valley now, it’s still quite an interesting place, and hopefully the lower elevations will circumvent
-            some of the problems associated with the snowpack at higher elevations.
-
-        </p>
-        <h2>Family Camp Date Clarification</h2>
-        <p>Due to some problems with reserving the campsite, the annual family camp is being moved to March 12-13, 2018. Originally,
-            it was from March 19th through March 20th. Please mark your calendars accordingly!
-
-        </p>
-        <p>Note that this date conflicts with Scout-o-rama. To make sure that there are enough people to host our booth at Scout-o-rama,
-            some people will be required to attend Scout-o-rama.
-        </p>
-        <h2>Gallery</h2>
-        <div>
-            <img src="https://newsletter.t485.org/2018/april/assets/April1.jpg" alt="Mt. Hermon Adventure">
-            <br>
-            <span class="image-caption">Mt. Hermon Adventure</span>
-
-
-        </div>
-
-        <br>
-        <p style="margin-top: 15px;">Past issues:
-            <a href="https://newsletter.t485.org/latest/">Latest Issue</a> |
-            <a href="https://newsletter.t485.org/2018/march/">March 2018</a> |
-            <a href="https://newsletter.t485.org/2018/feb/">February 2018</a> |
-            <a href="https://newsletter.t485.org">All</a>
-        </p>
-        <p style="margin-top: 40px;">
-            <i>The next installment of this monthly newsletter will come out on the first day of May. If you would like to make
-                an announcement or write an article to be featured in the next newsletter, please send us a message at the
-                <a href="https://t485.slack.com/messages/newsletter/">#newsletter</a> channel on
-                <a href="https://t485.slack.com/messages/newsletter/">slack</a>.</i>
-        </p>
-
-
-    </div>
-    <!-- /.content-wrapper -->
-
-    <div class="footer">
-        Copyright &copy; 2006-2018 Troop 485, Silicon Valley Monterey Bay Council, Boy Scouts of America.
-    </div>
+        </span>
+		<p>The Sierra received a lot of snow in March! The amount of snow that fell in March was more than double the amount of snow that fell in the entire winter---good for the ski tourism economy but unfortunately bad for spring backpacking. Taking into account some of the additional safety hazards associated with this surprise snowfall, we’ll be changing the location.</p>
+		<p>The new route is a 45 mile loop around Hetch Hetchy Reservoir in Northern Yosemite Nat’l Park. Hetch Hetchy used to be an amazing valley as impressive as Yosemite Valley, but it was dammed in 1923 (to the dismay of environmentalists like John Muir) and supplies water to the San Francisco area via the Hetch Hetchy Aqueduct. Although it’s more lake than valley now, it’s still quite an interesting place, and hopefully the lower elevations will circumvent some of the problems associated with the snowpack at higher elevations.</p>
+		<h2>Family Camp Date Clarification</h2>
+		<p>Due to some problems with reserving the campsite, the annual family camp is being moved to March 12-13, 2018. Originally, it was from March 19th through March 20th. Please mark your calendars accordingly!</p>
+		<h2>Easter egg hunt reflection</h2>
+        <span class="author">
+            <i>Richard Liu</i>
+        </span>
+		<p>Easter egg hunt was overall a success. Although few Scouts participated in the actual event, we got quite a lot done. In the morning we helped set up the egg hunt and ran our own catapult game booth. It was quite popular with the kids and easy to maintain. Although there were various spurts of rain in the morning, the event still continued on successfully. After lunch (generously provided by the organizers), we clean up our booth and the egg hunt area.</p>
+		<p>Before the egg hunt, we had an event to paint the bodes for the catapult game. The box painting was at HOC5 and was quite successful despite the pouring rain. In the future we will plan events according to the weather and bring rain gear if necessary.</p>
+		<p>Note that this date conflicts with Scout-o-rama. To make sure that there are enough people to host our booth at Scout-o-rama, some people will be required to attend Scout-o-rama.</p>
+		<h2>Gallery</h2>
+		<div>
+			<img alt="Mt. Hermon Adventure" src="https://newsletter.t485.org/2018/april/assets/April1.jpg"><br>
+			<span class="image-caption">Mt. Hermon Adventure</span>
+		</div><br>
+		<p style="margin-top: 15px;">Past issues: <a href="https://newsletter.t485.org/latest/">Latest Issue</a> | <a href="https://newsletter.t485.org/2018/march/">March 2018</a> | <a href="https://newsletter.t485.org/2018/feb/">February 2018</a> | <a href="https://newsletter.t485.org">All</a></p>
+		<p style="margin-top: 40px;"><i>The next installment of this monthly newsletter will come out on the first day of May. If you would like to make an announcement or write an article to be featured in the next newsletter, please send us a message at the <a href="https://t485.slack.com/messages/newsletter/">#newsletter</a> channel on <a href="https://t485.slack.com/messages/newsletter/">slack</a>.</i></p>
+	</div><!-- /.content-wrapper -->
+	<div class="footer">
+		Copyright &copy; 2006-2018 Troop 485, Silicon Valley Monterey Bay Council, Boy Scouts of America.
+	</div>
 </body>
-
 </html>
